@@ -1,11 +1,16 @@
 {
   "name": "dist-analyzer",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
-  "author": "",
+  "version": "0.0.1",
+  "description": "Simple plugin to analyze how bloated Astro build is",
   "license": "ISC",
-  "description": ""
+  "author": "Alex-1701",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "cd test && npm run build"
+  },
+  "dependencies": {
+    "filesize": "11.0.13",
+    "tablemark": "4.1.0"
+  }
 }
