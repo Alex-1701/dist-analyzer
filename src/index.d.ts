@@ -14,7 +14,7 @@ export declare const main: ({
   outDir,
 }: Config) => Promise<void>;
 
-type PluginConfig = Partial<Pick<Config, "outDir">>;
+type PluginConfig = Partial<Omit<Config, "outDir">>;
 
 export default function distAnalyzer(config?: PluginConfig): {
   name: string;
