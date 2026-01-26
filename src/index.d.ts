@@ -1,3 +1,5 @@
+import type { AstroIntegration } from "astro";
+
 interface Config {
   native: boolean;
   markdown: boolean;
@@ -16,10 +18,4 @@ export declare const main: ({
 
 type PluginConfig = Partial<Omit<Config, "outDir">>;
 
-export default function distAnalyzer(config?: PluginConfig): {
-  name: string;
-  hooks: {
-    "astro:build:done": () => Promise<void>;
-  };
-};
-export {};
+export default function (config?: PluginConfig): AstroIntegration;
