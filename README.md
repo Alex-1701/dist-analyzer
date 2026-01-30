@@ -1,6 +1,6 @@
 # dist-analyzer
 
-Simple [Astro.js](https://astro.build/) plugin to analyze how bloated build is. By default it calculates count and size of all files inside `.dist` folder.
+Dead simple [Astro.js](https://astro.build/) plugin to analyze how bloated bundle is. By default it calculates count and size of all files inside `outDir` folder.
 
 Output example:
 
@@ -25,7 +25,7 @@ npm i github:Alex-1701/dist-analyzer
 
 # Usage
 
-Add plugin to `astro.config.mjs` config
+Add plugin to `astro.config.*` file
 
 ```js
 // @ts-check
