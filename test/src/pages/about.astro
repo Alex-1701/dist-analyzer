@@ -1,0 +1,78 @@
+---
+import Card from "../components/Card.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="About - Astro Demo">
+  <h1>About This Project</h1>
+  <p>This is a demonstration of Astro's capabilities, including:</p>
+
+  <div class="features-grid">
+    <Card
+      title="File-based Routing"
+      description="Each .astro file in the pages directory automatically becomes a route."
+    />
+    <Card
+      title="Component Props"
+      description="Pass data to components using TypeScript-typed props for type safety."
+    />
+    <Card
+      title="Scoped Styles"
+      description="CSS is automatically scoped to components, preventing style conflicts."
+    />
+    <Card
+      title="Zero JS by Default"
+      description="Astro ships zero JavaScript by default, making sites incredibly fast."
+    />
+  </div>
+
+  <section class="info">
+    <h2>Why Astro?</h2>
+    <p>
+      Astro is a modern web framework designed for speed. It delivers fast,
+      content-focused websites with minimal JavaScript overhead.
+    </p>
+    <ul>
+      <li>Component-based architecture</li>
+      <li>Support for multiple frameworks (React, Vue, Svelte, etc.)</li>
+      <li>Built-in optimizations</li>
+      <li>Great developer experience</li>
+    </ul>
+  </section>
+</Layout>
+
+<style>
+  h1 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .info {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+  }
+
+  .info h2 {
+    color: #2c3e50;
+    margin-top: 0;
+  }
+
+  .info ul {
+    line-height: 1.8;
+    color: #555;
+  }
+
+  p {
+    line-height: 1.6;
+    color: #555;
+  }
+</style>

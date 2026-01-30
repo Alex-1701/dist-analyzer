@@ -5,13 +5,14 @@ Simple [Astro.js](https://astro.build/) plugin to analyze how bloated build is. 
 Output example:
 
 ```
-| type | amount | size |  size\* |
-| :--- | -----: | ---: | ------: |
-| HTML |      1 | 5675 | 5.68 kB |
-| SVG  |      3 | 5117 | 5.12 kB |
-| ICO  |      1 |  655 |   655 B |
+| type | amount |  size |   size\* |
+| :--- | -----: | ----: | -------: |
+| HTML |      5 | 17753 | 17.75 kB |
+| CSS  |      8 |  7110 |  7.11 kB |
+| SVG  |      1 |   749 |    749 B |
+| ICO  |      1 |   655 |    655 B |
 
-SUM: 11447 (11.45 kB)
+SUM: 26267 (26.27 kB)
 ```
 
 # Installation
