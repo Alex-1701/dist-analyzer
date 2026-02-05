@@ -1,0 +1,77 @@
+---
+import Card from "../components/Card.astro";
+import Layout from "../layouts/Layout.astro";
+
+const posts = [
+  {
+    title: "Getting Started with Astro",
+    description:
+      "Learn the basics of Astro and why it's great for building fast websites.",
+    link: "#",
+  },
+  {
+    title: "Component Composition",
+    description:
+      "Discover how to build reusable components and compose them effectively.",
+    link: "#",
+  },
+  {
+    title: "Astro Islands Architecture",
+    description:
+      "Understanding Astro's unique approach to client-side interactivity.",
+    link: "#",
+  },
+  {
+    title: "Optimizing Performance",
+    description: "Tips and tricks for making your Astro site even faster.",
+    link: "#",
+  },
+  {
+    title: "Integrations & Plugins",
+    description:
+      "Explore the ecosystem of Astro integrations and how to use them.",
+    link: "#",
+  },
+  {
+    title: "Deployment Guide",
+    description: "Deploy your Astro site to various platforms with ease.",
+    link: "#",
+  },
+];
+---
+
+<Layout title="Blog - Astro Demo">
+  <h1>Blog Posts</h1>
+  <p class="subtitle">Explore articles about Astro and web development</p>
+
+  <div class="posts-grid">
+    {
+      posts.map((post) => (
+        <Card
+          title={post.title}
+          description={post.description}
+          link={post.link}
+        />
+      ))
+    }
+  </div>
+</Layout>
+
+<style>
+  h1 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    color: #666;
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+  }
+
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+</style>

@@ -1,0 +1,51 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer>
+  <div class="footer-content">
+    <p>&copy; {currentYear} Astro Demo Project. Built with Astro.</p>
+    <div class="footer-links">
+      <a href="https://astro.build" target="_blank">Astro Docs</a>
+      <a href="https://github.com/withastro/astro" target="_blank">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 2rem;
+    margin-top: auto;
+  }
+
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-content p {
+    margin: 0;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .footer-links a:hover {
+    color: #3498db;
+  }
+</style>

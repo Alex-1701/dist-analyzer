@@ -1,0 +1,120 @@
+---
+import Button from "../components/Button.astro";
+import Card from "../components/Card.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Home - Astro Demo">
+  <div class="hero">
+    <h1>Welcome to Astro</h1>
+    <p class="tagline">
+      Build faster websites with less client-side JavaScript
+    </p>
+    <div class="cta-buttons">
+      <Button text="Get Started" variant="primary" size="large" />
+      <Button text="Learn More" variant="secondary" size="large" />
+    </div>
+  </div>
+
+  <section class="features">
+    <h2>Key Features</h2>
+    <div class="cards-grid">
+      <Card
+        title="Component Islands"
+        description="Astro's islands architecture allows you to build interactive UI with your favorite framework while keeping the rest of your site static."
+        link="/about"
+      />
+      <Card
+        title="Zero JS by Default"
+        description="Astro renders your site to static HTML, shipping zero JavaScript by default. Add interactivity only where you need it."
+        link="/blog"
+      />
+      <Card
+        title="Bring Your Own Framework"
+        description="Use React, Vue, Svelte, or any other framework you love. Astro supports them all and lets you mix and match."
+        link="/example"
+      />
+    </div>
+  </section>
+
+  <section class="info-section">
+    <h2>Why Choose Astro?</h2>
+    <p>
+      Astro is designed for building fast content sites like blogs, marketing
+      pages, and documentation sites. It offers excellent performance out of the
+      box and provides a delightful developer experience.
+    </p>
+    <ul>
+      <li>File-based routing for intuitive project structure</li>
+      <li>Built-in optimizations for images, fonts, and more</li>
+      <li>TypeScript support out of the box</li>
+      <li>Rich ecosystem of integrations and themes</li>
+    </ul>
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    text-align: center;
+    padding: 3rem 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 12px;
+    margin-bottom: 3rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin: 0 0 1rem 0;
+  }
+
+  .tagline {
+    font-size: 1.25rem;
+    margin: 0 0 2rem 0;
+    opacity: 0.95;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .features {
+    margin-bottom: 3rem;
+  }
+
+  .features h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .info-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .info-section h2 {
+    color: #2c3e50;
+    margin-top: 0;
+  }
+
+  .info-section p {
+    line-height: 1.6;
+    color: #555;
+  }
+
+  .info-section ul {
+    line-height: 1.8;
+    color: #555;
+  }
+</style>

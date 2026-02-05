@@ -1,0 +1,21 @@
+{
+  "name": "astro-example-app",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "astro": "astro",
+    "build": "astro build",
+    "dev": "astro dev",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "5.16.15"
+  },
+  "devDependencies": {
+    "dist-analyzer": "file:.."
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-musl": "4.56.0",
+    "@rollup/rollup-win32-x64-msvc": "4.56.0"
+  }
+}

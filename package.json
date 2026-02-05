@@ -1,0 +1,31 @@
+{
+  "name": "dist-analyzer",
+  "version": "0.0.1",
+  "description": "Simple plugin to analyze how bloated Astro build is",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alex-1701/astro-id-minifier.git"
+  },
+  "license": "WTFPL",
+  "author": "Alex-1701 <alex17koleda@gmail.com>",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": "src/bin.js",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "format": "prettier . -w",
+    "test": "cd test && npm run build"
+  },
+  "dependencies": {
+    "filesize": "11.0.13",
+    "tablemark": "4.1.0"
+  },
+  "devDependencies": {
+    "astro": "5.17.1",
+    "prettier": "3.8.1",
+    "prettier-plugin-astro": "0.14.1",
+    "prettier-plugin-astro-organize-imports": "0.4.11"
+  }
+}

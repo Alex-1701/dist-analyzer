@@ -1,0 +1,126 @@
+---
+import Button from "../components/Button.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Example - Astro Demo">
+  <h1>Component Examples</h1>
+  <p class="description">
+    This page demonstrates various components and their variations.
+  </p>
+
+  <section class="section">
+    <h2>Button Variants</h2>
+    <div class="button-showcase">
+      <div>
+        <h3>Primary Buttons</h3>
+        <div class="button-group">
+          <Button text="Small Primary" variant="primary" size="small" />
+          <Button text="Medium Primary" variant="primary" size="medium" />
+          <Button text="Large Primary" variant="primary" size="large" />
+        </div>
+      </div>
+
+      <div>
+        <h3>Secondary Buttons</h3>
+        <div class="button-group">
+          <Button text="Small Secondary" variant="secondary" size="small" />
+          <Button text="Medium Secondary" variant="secondary" size="medium" />
+          <Button text="Large Secondary" variant="secondary" size="large" />
+        </div>
+      </div>
+
+      <div>
+        <h3>Danger Buttons</h3>
+        <div class="button-group">
+          <Button text="Small Danger" variant="danger" size="small" />
+          <Button text="Medium Danger" variant="danger" size="medium" />
+          <Button text="Large Danger" variant="danger" size="large" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Component Props</h2>
+    <div class="code-example">
+      <pre>
+          <code>
+&lt;Button
+    text="Click me"
+    variant="primary"
+    size="medium"
+/&gt;
+          </code>
+      </pre>
+    </div>
+    <p>
+      Components accept props to customize their appearance and behavior. This
+      demonstrates Astro's component-based architecture.
+    </p>
+  </section>
+</Layout>
+
+<style>
+  h1 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+  }
+
+  .description {
+    color: #666;
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+  }
+
+  .section {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .section h2 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .button-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .button-showcase h3 {
+    color: #34495e;
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+  }
+
+  .button-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .code-example {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+    overflow-x: auto;
+  }
+
+  .code-example pre {
+    margin: 0;
+  }
+
+  .code-example code {
+    font-family: "Monaco", "Courier New", monospace;
+    font-size: 0.9rem;
+    color: #2c3e50;
+  }
+</style>
