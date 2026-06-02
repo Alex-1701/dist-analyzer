@@ -14,12 +14,12 @@ const config = {
 };
 
 for (const arg of process.argv) {
-  if (arg === `--markdown`) {
-    config.markdown = true;
-  }
-
   if (arg === `--native`) {
     config.native = true;
+  }
+
+  if (arg === `--markdown`) {
+    config.markdown = true;
   }
 
   if (arg === `--summary`) {
