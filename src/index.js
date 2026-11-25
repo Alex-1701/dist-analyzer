@@ -50,7 +50,14 @@ const mapFilesWithSizes = (files, pathToDist) => {
 };
 
 export const main = async ({ native, markdown, summary, exclude, outDir }) => {
-  const files = await fs.readdir(outDir, { recursive: true });
+  const entries = await fs.readdir(outDir, { recursive: true });
+  const stats = await Promise.all(
+    entries.map(async (entry) => {
+      const stat = await fs.stat(`${outDir}/${entry}`);
+      return stat.isFile() ? entry : null;
+    }),
+  );
+  const files = stats.filter(Boolean);
   const types = getTypes(files);
   const upperCaseExclude = exclude.map((str) => str.toUpperCase());
   const filteredTypes = types.filter(

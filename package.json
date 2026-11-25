@@ -1,6 +1,6 @@
 {
   "name": "dist-analyzer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple plugin to analyze how bloated Astro build is",
   "repository": {
     "type": "git",

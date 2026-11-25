@@ -81,4 +81,14 @@ Having troubles with bundle size? Try out this plugins:
 
 # CLI
 
+Run form local folder
+
 `npx github:Alex-1701/dist-analyzer`
+
+Run for specific folder
+
+`npx github:Alex-1701/dist-analyzer dist`
+
+Run with boolean params (`native`, `markdown`, `summary`). If param preserve then it is `true`
+
+`npx github:Alex-1701/dist-analyzer dist --native`
